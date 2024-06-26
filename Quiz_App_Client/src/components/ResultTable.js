@@ -5,11 +5,23 @@ export default function ResultTable() {
 
     const [data, setData] = useState([])
 
+    // useEffect(() => {
+    //     getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`, (res) => {
+    //         setData(res)
+    //     })
+    // })
     useEffect(() => {
-        getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`, (res) => {
-            setData(res)
-        })
-    })
+        const fetchData = async () => {
+            try {
+                const url = `${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`;
+                console.log("Fetching data from URL:", url); // Log the URL for debugging
+                await getServerData(url, setData);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
   return (
     <div>

@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root{
-  --primary-color: #0DFF92;
-  --dark-color:#222222;
+  --primary-color: #8798a9;
+  --dark-color:#080808;
   --light-color: #f0f0f0;
 }
 
 body, html{
+
   height: 100%;
-  background: var(--dark-color)
+  background: url(c:\Users\umane\MCQ-Battle\mcq-battle-frontend\src\components\auth\quiz_background.jpg)
 }
 
 * > *{
@@ -71,8 +72,8 @@ body, html{
 
 .container .btn:hover{
     cursor: pointer;
-    background-color: #f0f0f0;
-    color: #202020;
+    background-color: #34324a;
+    color: #1a1919;
 }
 
 .next{
@@ -81,7 +82,7 @@ body, html{
 }
 
 .prev{
-    background-color: #faff5a;
+    background-color: #1a234a;
     justify-self: flex-start;
 }
 

@@ -21,7 +21,10 @@ export function CheckUserExist({ children }){
 }
 
 /** get server data */
+
 export async function getServerData(url, callback){
+    //let url = `${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`;
+    console.log(url);
     const data = await (await axios.get(url))?.data;
     return callback ? callback(data) : data;
 }

@@ -10,6 +10,8 @@ import { updateResult } from '../hooks/setResult'
 export default function Questions({ onChecked }) {
 
     const [checked, setChecked] = useState(undefined)
+    //console.log(setChecked);
+    //console.log('hello');
     const { trace } = useSelector(state => state.questions);
     const result = useSelector(state => state.result.result);
     const [{ isLoading, apiData, serverError}] = useFetchQestion() 
